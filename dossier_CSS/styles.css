@@ -1,256 +1,198 @@
-/* ============================================
-   RESET ET BASES
-============================================ */
-
-/* Reset des marges et paddings par défaut */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Style général de la page */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
     line-height: 1.6;
-}
-
-/* ============================================
-   CONTENEUR PRINCIPAL
-============================================ */
-
-/* Conteneur pour centrer le contenu */
-.container {
-    width: 90%;
+    color: #333;
+    background-color: #f9f9f9;
+    background-image: url('https://cdn8.futura-sciences.com/a1280/images/diaporama/952-lac-vert-autriche/12052013_gruner_see_0411.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* ============================================
-   EN-TÊTE
-============================================ */
 
-/* Style de l'en-tête principal */
-.header {
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
     background-color: #2c3e50;
     color: white;
-    padding: 30px 0;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Titre principal */
-.main-title {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-/* Sous-titre */
-.subtitle {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-/* ============================================
-   SECTION CATÉGORIES
-============================================ */
-
-/* Titre de section */
-.section-title {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 30px;
-    text-align: center;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #e0e0e0;
-}
-
-/* Grille des catégories */
-.categories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
-    margin-bottom: 50px;
-}
-
-/* ============================================
-   CARTES DE CATÉGORIES
-============================================ */
-
-/* Style de chaque carte */
-.category-card {
-    background-color: white;
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
 }
 
-/* Effet au survol */
-.category-card:hover {
-    transform: translateY(-5px);
-}
-
-/* En-tête de chaque carte */
-.category-header {
-    padding: 20px;
-    color: white;
-    font-size: 1.5rem;
+header h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: #ecf0f1;
     font-weight: bold;
-    text-align: center;
 }
 
-/* Contenu de chaque carte */
-.category-content {
-    padding: 20px;
+header p {
+    font-size: 1.1em;
+    color: #bdc3c7;
 }
 
-/* Nombre de livres */
-.book-count {
-    display: inline-block;
-    background-color: #f0f0f0;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
+hr {
+    border: none;
+    height: 2px;
+    background-color: #3498db;
+    margin: 25px auto;
+    width: 80%;
+    font-weight: bold;
 }
 
-/* Description de la catégorie */
-.category-description {
-    color: #888
-    margin-bottom 15px;
-    font-size: 0.95rem;
+
+main {
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
 }
 
-/* Liste des livres */
-.books-list {
+
+h2 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+
+h3 {
+    color: hwb(231 21% 63%);
+    background-color: #ecf0f1;
+    font-size: 1.4em;
+    margin: 25px 0 15px 0;
+    padding-left: 10px;
+    border-left: 4px solid #3498db;
+}
+
+
+ul {
     list-style-type: none;
-    margin-bottom: 15px;
-}
-
-/* Élément de la liste */
-.books-list li {
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-}
-
-/* Supprimer la bordure du dernier élément */
-.books-list li:last-child {
-    border-bottom: none;
-}
-
-/* Lien "Voir plus" */
-.view-more {
-    display: inline-block;
-    color: #3498db;
-    text-decoration: none;
+    margin-left: 20px;
+    margin-bottom: 20px;
     font-weight: bold;
-    font-size: 0.9rem;
 }
 
-/* Effet au survol du lien */
-.view-more:hover {
-    text-decoration: underline;
+li {
+    background-color: #ecf0f1;
+    margin: 8px 0;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border-left: 3px solid #3498db;
+    transition: all 0.3s ease;
 }
 
-/* ============================================
-   COULEURS SPÉCIFIQUES POUR CHAQUE CATÉGORIE
-============================================ */
-
-/* HTML/CSS */
-.html-css {
-    background-color: #e44d26;
+li:hover {
+    background-color: #d6eaf8;
+    transform: translateX(5px);
 }
 
-/* Java */
-.java {
-    background-color: #007396;
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* JavaScript */
-.javascript {
-    background-color: #f0db4f;
-    color: #333;
+thead {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
 }
 
-/* C */
-.c {
-    background-color: #00599c;
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
 }
 
-/* Python */
-.python {
-    background-color: #3776ab;
+th {
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
-/* C++ */
-.cpp {
-    background-color: #00599c;
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+    font-weight: bold;
 }
 
-/* PHP */
-.php {
-    background-color: #777bb4;
+tbody tr:hover {
+    background-color: #e8f4fc;
+    font-weight: bold;
 }
 
-/* SQL */
-.sql {
-    background-color: #f29111;
+
+td:last-child {
+    font-weight: bold;
 }
 
-/* ============================================
-   PIED DE PAGE
-============================================ */
+td:last-child:contains("Disponible") {
+    color: #27ae60;
+    font-weight: bold;
+}
 
-/* Style du pied de page */
-.footer {
+td:last-child:contains("Emprunté") {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+
+footer {
     text-align: center;
-    padding: 20px;
-    color: #7f8c8d;
-    font-size: 0.9rem;
-    border-top: 1px solid #e0e0e0;
-    margin-top: 30px;
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 8px;
 }
 
-/* ============================================
-   RESPONSIVE DESIGN
-============================================ */
+footer p {
+    margin: 10px 0;
+    color: #bdc3c7;
+}
 
-/* Pour les tablettes */
+
 @media (max-width: 768px) {
-    .categories-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .main-title {
-        font-size: 2rem;
-    }
-    
-    .section-title {
-        font-size: 1.7rem;
-    }
-}
-
-/* Pour les mobiles */
-@media (max-width: 480px) {
-    .categories-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .main-title {
-        font-size: 1.8rem;
-    }
-    
-    .section-title {
-        font-size: 1.5rem;
-    }
-    
-    .container {
-        width: 95%;
+    body {
         padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    th, td {
+        padding: 10px;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    h3 {
+        font-size: 1.2em;
     }
 }
